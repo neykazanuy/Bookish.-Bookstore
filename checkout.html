@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Bookish</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo__pr">
+                <a href="index.html" class="nav__logo">
+                    <i class="ri-book-3-line"></i>Bookish
+                </a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link"><i
+                                class="ri-home-2-line"></i><span>Home</span></a></li>
+                    <li class="nav__item"><a href="orders.html" class="nav__link"><i
+                                class="ri-bank-card-line"></i><span>Orders</span></a></li>
+                                <li class="nav__item"><a href="customer-service.html" class="nav__link"><i
+                                            class="ri-price-tag-3-line"></i><span>Customer service</span></a></li>
+                    <li class="nav__item"><a href="shopping-cart.html" class="nav__link"><i
+                                class="ri-shopping-cart-2-line"></i><span>Shopping cart</span></a></li>
+                    <li class="nav__item"><a href="library.html" class="nav__link"><i
+                                class="ri-book-2-line"></i><span>Library</span></a></li>
+                </ul>
+            </div>
+            <div class="login-button-container">
+                <ul class="login-list">
+                    <li><a href="login.html" class="login-button"><i class="fa-solid fa-user"></i><span>Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Order Confirmation</h2>
+        <div id="checkout-container">
+        </div>
+
+        <form id="checkout-form">
+            <h3>Enter your details</h3>
+            <input type="text" placeholder="Name" id="name" required>
+            <input type="text" placeholder="Address" id="address" required>
+            <input type="tel" placeholder="Phone" id="phone" required>
+            <button type="submit" class="order-btn">Confirm Order</button>
+        </form>
+
+        <p id="success-message" style="display:none; color: green; margin-top: 20px;">🎉 Your order has been placed
+            successfully!</p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Contacts</h3>
+                <p>📞 <a href="tel:+380991234567">+38 (096) 426-82-26</a></p>
+                <p>✉️ <a href="mailto:info@bookish.com">info@bookish.com</a></p>
+                <p>📍 Kyiv, Ukraine</p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social media</h3>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
+                        Facebook</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://t.me/" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">About us</h3>
+                <p>We offer book rentals for students, school kids, and all book lovers across Ukraine. Easy, fast, and
+                    convenient!</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2025 Bookish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const container = document.getElementById("checkout-container");
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+            container.innerHTML = "<p>Ваш кошик порожній.</p>";
+            document.getElementById("checkout-form").style.display = "none";
+        } else {
+            cart.forEach(book => {
+                const bookEl = document.createElement("div");
+                bookEl.classList.add("cart-item");
+                bookEl.innerHTML = `
+                    <div class="cart-item-content">
+                        <img src="${book.img}" width="80" height="100" alt="${book.title}">
+                        <span class="cart-title">${book.title}</span>
+                    </div>
+                `;
+                container.appendChild(bookEl);
+            });
+        }
+
+
+        document.getElementById("checkout-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("cart");
+            document.getElementById("checkout-form").style.display = "none";
+            document.getElementById("checkout-container").style.display = "none";
+            document.getElementById("success-message").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

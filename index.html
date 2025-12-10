@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Bookish</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo__pr">
+                <a href="index.html" class="nav__logo">
+                    <i class="ri-book-3-line"></i>Bookish
+                </a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link"><i
+                                class="ri-home-2-line"></i><span>Home</span></a></li>
+                    <li class="nav__item"><a href="orders.html" class="nav__link"><i
+                                class="ri-bank-card-line"></i><span>Orders</span></a></li>
+                    <li class="nav__item"><a href="customer-service.html" class="nav__link"><i
+                                class="ri-price-tag-3-line"></i><span>Customer service</span></a></li>
+                    <li class="nav__item"><a href="shopping-cart.html" class="nav__link"><i
+                                class="ri-shopping-cart-2-line"></i><span>Shopping cart</span></a></li>
+                    <li class="nav__item"><a href="library.html" class="nav__link"><i
+                                class="ri-book-2-line"></i><span>Library</span></a></li>
+                </ul>
+            </div>
+            <div class="login-button-container">
+                <ul class="login-list">
+                    <li><a href="login.html" class="login-button"><i class="fa-solid fa-user"></i><span>Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main_container">
+        <h1 class="bookish-title">Bookish</h1>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who are we?</h2>
+                    <p>We are a passionate team of book lovers, committed to bringing you the best titles from around
+                        the world. Whether you're into fantasy, romance, or thrillers – we've got something for you.</p>
+                </div>
+                <div class="about-video">
+                    <video width="100%" height="auto" autoplay muted loop>
+                        <source src="media/Whisk_u2nkf2n4azn4mgmj1cokjgotqtnlrtlhvwoj1cn.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions-section">
+            <div class="questions-content">
+                <div class="questions-text">
+                    <h2 class="questions-title">Frequently Asked Questions</h2>
+                    <ul class="questions-list">
+                        <li class="questions-item">How do I place an order?</li>
+                        <p class="questions-list-answer">To place an order, simply select a book, add it to your cart,
+                            proceed to checkout, and fill in your delivery details. You can pay online through a secure
+                            payment system or choose cash on delivery (if available).</p>
+
+                        <li class="questions-item">Can I return a book if it doesn't meet my expectations?</li>
+                        <p class="questions-list-answer">Yes, you can return a book within 14 days of purchase, as long
+                            as it is in its original condition and packaging. Please contact our customer support for
+                            detailed return instructions.</p>
+
+                        <li class="questions-item">What payment methods do you accept?</li>
+                        <p class="questions-list-answer">We accept payments via Visa, MasterCard, as well as through
+                            payment systems like PayPal. Some regions may also offer cash on delivery as an option.</p>
+
+                        <li class="questions-item">How do I know if a book is in stock?</li>
+                        <p class="questions-list-answer">All available books on our website are marked as "in stock." If
+                            a book is temporarily unavailable, you can place a pre-order or get notified when the item
+                            is back in stock.</p>
+
+                        <li class="questions-item">How can I stay updated on new books and discounts?</li>
+                        <p class="questions-list-answer">Subscribe to our newsletter or follow us on social media to
+                            stay informed about new arrivals, promotions, and discounts.</p>
+
+                        <li class="questions-item">How can I contact you?</li>
+                        <p class="questions-list-answer">You can contact us through the contact form on our website or
+                            by phone. You can also email us at support@bookish.com.</p>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recommended">
+            <h2 class="section__title">Recommended Books</h2>
+            <div class="book-container">
+                <div class="book-card"><img onclick="goToLibrary()" src="img/81KDJDxfrsL._SL1500_.jpg" alt="Book 1" />
+                </div>
+                <div class="book-card"><img onclick="goToLibrary()" src="img/61up2bjglyl.jpg" alt="Book 2" /></div>
+                <div class="book-card"><img onclick="goToLibrary()" src="img/punk-57-944274.800x800.jpeg"
+                        alt="Book 3" /></div>
+                <div class="book-card"><img onclick="goToLibrary()" src="img/811HWWUPsuL._SL1500_.jpg" alt="Book 4" />
+                </div>
+                <div class="book-card"><img onclick="goToLibrary()" src="img/81-WyvX11ML._SL1500_.jpg" alt="Book 5" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Contacts</h3>
+                <p>📞 <a href="tel:+380991234567">+38 (096) 426-82-26</a></p>
+                <p>✉️ <a href="mailto:info@bookrent.com">info@bookish.com</a></p>
+                <p>📍 Kyiv, Ukraine</p>
+            </div>
+    
+            <div class="footer__content">
+                <h3 class="footer__title">Social media</h3>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://t.me/" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                </div>
+            </div>
+    
+            <div class="footer__content">
+                <h3 class="footer__title">About us</h3>
+                <p>Мe offer book rentals for students, school kids, and all book lovers across Ukraine. Easy, fast, and
+                    convenient!</p>
+            </div>
+        </div>
+    
+        <div class="footer__bottom">
+            <p>&copy; 2025 Bookish. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function goToLibrary() {
+            window.location.href = "library.html";
+        }
+    </script>
+</body>
+
+</html>

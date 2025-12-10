@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Bookish</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo__pr">
+                <a href="index.html" class="nav__logo">
+                    <i class="ri-book-3-line"></i>Bookish
+                </a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link"><i
+                                class="ri-home-2-line"></i><span>Home</span></a></li>
+                    <li class="nav__item"><a href="orders.html" class="nav__link"><i
+                                class="ri-bank-card-line"></i><span>Orders</span></a></li>
+                    <li class="nav__item"><a href="customer-service.html" class="nav__link"><i
+                                class="ri-price-tag-3-line"></i><span>Customer service</span></a></li>
+                    <li class="nav__item"><a href="shopping-cart.html" class="nav__link"><i
+                                class="ri-shopping-cart-2-line"></i><span>Shopping cart</span></a></li>
+                    <li class="nav__item"><a href="library.html" class="nav__link"><i
+                                class="ri-book-2-line"></i><span>Library</span></a></li>
+                </ul>
+            </div>
+            <div class="login-button-container">
+                <ul class="login-list">
+                    <li><a href="login.html" class="login-button"><span>Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="orders-container">
+        <div class="orders-title">
+            <h2>Your Orders</h2>
+        </div>
+
+        <div class="orders-list">
+            <div class="order-card">
+                <h3>Order #12345</h3>
+                <p><strong>Book:</strong> If He Had Been With Me</p>
+                <p><strong>Status:</strong> <span class="status-pending">Pending</span></p>
+                <p><strong>Order Date:</strong> March 25, 2025</p>
+                <button class="view-order">View Order</button>
+            </div>
+
+            <div class="order-card">
+                <h3>Order #12346</h3>
+                <p><strong>Book:</strong> Fourth Wing</p>
+                <p><strong>Status:</strong> <span class="status-shipped">Shipped</span></p>
+                <p><strong>Order Date:</strong> March 20, 2025</p>
+                <button class="view-order">View Order</button>
+            </div>
+
+            <div class="order-card">
+                <h3>Order #12347</h3>
+                <p><strong>Book:</strong> The Surgeon</p>
+                <p><strong>Status:</strong> <span class="status-delivered">Delivered</span></p>
+                <p><strong>Order Date:</strong> March 18, 2025</p>
+                <button class="view-order">View Order</button>
+            </div>
+
+            <!-- Add more orders here as needed -->
+
+        </div>
+    </main>
+
+<footer class="footer">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+            <h3 class="footer__title">Contacts</h3>
+            <p>📞 <a href="tel:+380991234567">+38 (096) 426-82-26</a></p>
+            <p>✉️ <a href="mailto:info@bookrent.com">info@bookish.com</a></p>
+            <p>📍 Kyiv, Ukraine</p>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Social media</h3>
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    Instagram</a>
+                <a href="https://t.me/" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
+            </div>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">About us</h3>
+            <p>Мe offer book rentals for students, school kids, and all book lovers across Ukraine. Easy, fast, and
+                convenient!</p>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <p>&copy; 2025 Bookish. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="orders.js"></script>
+</body>
+
+</html>

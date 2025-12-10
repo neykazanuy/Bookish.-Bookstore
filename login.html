@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bookish</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+ 
+<body>
+<header class="header" id="header">
+    <nav class="nav container">
+        <div class="logo__pr">
+            <a href="index.html" class="nav__logo">
+                <i class="ri-book-3-line"></i>Bookish
+            </a>
+        </div>
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">
+                        <i class="ri-home-2-line"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="orders.html" class="nav__link">
+                        <i class="ri-bank-card-line"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="customer-service.html" class="nav__link">
+                        <i class="ri-price-tag-3-line"></i>
+                        <span>Customer service</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="shopping-cart.html" class="nav__link">
+                        <i class="ri-shopping-cart-2-line"></i>
+                        <span>Shopping cart</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="library.html" class="nav__link">
+                        <i class="ri-book-2-line"></i>
+                        <span>Library</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login-button-container">
+            <ul class="login-list">
+                <li><a href="login.html" class="login-button"></i> <span>Login</span></a>
+                </li>
+            </ul>
+        </div>
+</header>
+    <main class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" action="index.html" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+            </form>
+
+            <div class="other-options">
+                <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            alert('Login successful! Redirecting to the homepage...');
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+
+</html>
